@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KAMSystems - History</title>
+    <script src="../js/login.js"></script>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <img id="logo" src="../images/logo.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="history.html">Deals & History</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <button type="button" onclick="logOut()" class="btn">Sign out</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+
+            <div class="alert alert-danger alert-dismissible fade hidden" role="alert">
+                  <a>  You need to fill in all the fields! </a>
+                  </div>
+
+        
+
+    <div id="dealcontainer">
+        <div class="row">
+     
+       <!--Add a deal-->
+       <div class="col md-4">
+            <h1>Finished Deals & Meetings</h1>
+            <br>
+            <form id="myForm">
+              <div class="form-group">
+                <label class="label_deal" for="formGroupExampleInput">Name</label>
+                <input type="text" class="form-control" id="deal_name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label  class="label_deal" for="formGroupExampleInput2">Company</label>
+                <input type="text" class="form-control" id="deal_company" placeholder="Company">
+              </div>
+              <div class="form-group">
+                    <label  class="label_deal" for="formGroupExampleInput2">Deal</label>
+                    <input type="text" class="form-control" id="deal_deal" placeholder="What deal or event did you make?">
+                  </div>
+                  <div class="form-group">
+                        <label  class="label_deal" for="formGroupExampleInput2">Date</label>
+                        <input type="date" class="form-control" id="deal_date"  placeholder="Pick a date">
+                      </div>
+                      <button id="deal_btn" type="button" class="btn" onclick="addDealToHistory()">Add deal to history</button>
+            </form>
+                <br>
+               
+            </div>
+              <!--History -->
+
+             
+
+            <div class="col md-8">
+                    <h1>History</h1>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                    </li>
+                </ul>
+                <table class="table">
+                    <thead>
+                        <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Company</th>
+                                <th class="d-none d-lg-table-cell" scope="col">Event</th>
+                                <th class="d-none d-sm-table-cell" scope="col">Date</th>
+                               
+                        </tr>
+                    </thead>
+                    <tbody id="historyTbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    </main>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="../js/history.js"></script>
+</body>
+
+
+</body>
+
+</html>

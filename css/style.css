@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+body {
+  background-color: #2B2D30;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #ccc;
+}
+
+a {
+  color: #31c6e8;
+}
+
+a:hover {
+  color: #31e89f;
+  text-decoration: none;
+}
+
+.popover, .modal-content {
+  background-color: #232529;
+  border: 2px solid #1B1D20;
+}
+.popover .popover-body, .modal-content .popover-body {
+  color: #ccc !important;
+}
+.popover .popover-header, .modal-content .popover-header {
+  background-color: #232529;
+  color: #31c6e8;
+}
+.popover input, .popover textarea, .modal-content input, .modal-content textarea {
+  background-color: #ddd;
+  color: black;
+}
+
+main {
+  margin: 17px;
+}
+main h1 {
+  font-size: 40px;
+  color: #31e89f;
+}
+main h2 {
+  font-size: 28px;
+}
+main #newEvent {
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: #232529;
+}
+.navbar .nav-item {
+  font-size: 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+.navbar #logo {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+.navbar .active a {
+  color: #31e89f;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(49,198,232, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar .navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(49,232,159,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#calendar {
+  text-align: center;
+}
+#calendar .month {
+  border: 2px solid #1B1D20;
+  padding: 70px 25px;
+  width: 100%;
+  background: #232529;
+  text-align: center;
+}
+#calendar .month #calendarYear {
+  color: #31c6e8;
+  font-size: 20px;
+}
+#calendar .month #calendarMonth {
+  color: #31e89f;
+}
+#calendar .month ul {
+  margin: 0;
+  padding: 0;
+}
+#calendar .month li {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  list-style-type: none;
+  color: #31c6e8;
+}
+#calendar .month #prevMonth {
+  float: left;
+  padding-top: 10px;
+}
+#calendar .month #nextMonth {
+  float: right;
+  padding-top: 10px;
+}
+#calendar .month #prevMonth:hover, #calendar .month #nextMonth:hover {
+  cursor: pointer;
+  color: #31e89f;
+}
+#calendar table {
+  border-bottom: 2px solid #1B1D20;
+}
+#calendar .weekdays {
+  border-right: 2px solid #1B1D20;
+  border-left: 2px solid #1B1D20;
+  background-color: #2B2D30;
+}
+#calendar .weekdays th {
+  color: #31c6e8;
+}
+#calendar .days {
+  border: 2px solid #1B1D20;
+  background: #232529;
+}
+#calendar .days td.active {
+  color: #31e89f;
+}
+#calendar .calendarEvent {
+  max-width: 100%;
+  display: block;
+  color: #ccc;
+  background-color: #2B2D30;
+  border-radius: 4px;
+  border: 2px solid #1B1D20;
+}
+#calendar .calendarTitle {
+  display: none;
+}
+
+#events .eventCard {
+  font-size: 15px;
+  font-family: "Roboto", "Arial", sans-serif;
+  border: 2px solid #1B1D20;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  padding: 5px;
+  background-color: #232529;
+  overflow: auto;
+  clear: both;
+}
+#events .eventCard img {
+  width: 20px;
+  height: 20px;
+}
+#events .eventCard .phone {
+  margin-right: 5px;
+}
+#events .eventCard span, #events .eventCard .edit {
+  float: right;
+}
+#events .eventCard .delete {
+  background: none;
+  border: none;
+  float: right;
+  margin-left: 5px;
+}
+#events .eventCard .email {
+  width: 25px;
+  height: 25px;
+}
+#events .eventCard h3 {
+  float: left;
+  color: #31c6e8;
+}
+#events .eventCard span {
+  margin-top: 8px;
+}
+#events .eventCard p {
+  clear: both;
+}
+#events .eventCard img:hover {
+  cursor: pointer;
+}
+#events .btn {
+  margin-bottom: 10px;
+}
+
+.close {
+  color: #31c6e8;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.close:hover {
+  color: #31e89f;
+}
+
+#ui-datepicker-div {
+  background-color: #2B2D30;
+  padding: 5px;
+  border: 2px solid #1B1D20;
+}
+#ui-datepicker-div .ui-state-default {
+  text-align: center;
+  color: #ccc;
+  background-color: #232529;
+  border-color: #232529;
+}
+#ui-datepicker-div .ui-state-active {
+  color: black;
+  background-color: #31c6e8;
+  border-color: #31c6e8;
+}
+#ui-datepicker-div .ui-state-highlight {
+  color: black;
+  background-color: #31e89f;
+  border-color: #31e89f;
+}
+#ui-datepicker-div .ui-datepicker-header {
+  color: #ccc;
+  background-color: #232529;
+  border-color: #232529;
+}
+
+#addNewEvent .form-control {
+  border: 2px solid #1B1D20;
+  color: black;
+  margin-bottom: 10px;
+}
+#addNewEvent textarea {
+  height: auto;
+}
+
+.btn {
+  background-color: #31c6e8;
+  border: 2px solid #1B1D20;
+  color: black;
+}
+
+.btn:hover {
+  background-color: #31e89f;
+}
+
+.btn:focus, button:focus, a:focus, input[type=text] {
+  outline: none;
+  box-shadow: none;
+}
+
+td {
+  color: #ccc;
+}
+
+th {
+  color: #31e89f;
+}
+
+.selectCustomer {
+  background-color: rgba(49, 232, 159, 0.28);
+}
+
+#customerTbody tr:hover {
+  background-color: rgba(49, 232, 159, 0.28);
+}
+
+.modal-body input {
+  margin-bottom: 1rem;
+}
+
+#loginLogo {
+  height: 10%;
+  width: 10%;
+  margin: 1rem 1rem;
+}
+
+.logininput {
+  margin-bottom: 1rem;
+}
+
+.login_wrap {
+  margin-top: 15%;
+}
+
+.container_history {
+  margin-top: 3px;
+  margin-right: 5%;
+}
+
+.label_deal{
+  color:#31e89f;
+}
+
+@media screen and (min-width: 768px) {
+  .calendarEvent {
+    margin: auto;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .table td, table th {
+    padding: 0.5rem !important;
+  }
+
+  .calendarEvent {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .table td, table th {
+    padding: 0.25rem !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

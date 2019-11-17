@@ -1,0 +1,335 @@
+@use "colors";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+$eventWidth: 500px;
+$iconSize: 20px;
+$bodyText: 15px;
+$fontHeading: "Roboto Condensed", "Arial", sans-serif;
+$fontBody: "Roboto", "Arial", sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontHeading;
+}
+
+body {
+    background-color: colors.$lightDark;
+    font-family: $fontBody;
+    color: colors.$textColor;
+}
+
+a {
+    color: colors.$subTitleColor;
+}
+
+a:hover {
+    color: colors.$titleColor;
+    text-decoration: none;
+}
+
+.popover, .modal-content { // modal, popovers
+    background-color: colors.$darkerDark;
+    border: 2px solid colors.$borderColor;
+    .popover-body {
+        color: colors.$textColor !important;
+    }
+    .popover-header {
+        background-color: colors.$darkerDark;
+        color: colors.$subTitleColor;
+    }
+    input, textarea {
+        background-color: #ddd;
+        color: black;
+    }
+}
+
+main { 
+    margin: 17px;
+    h1 {
+        font-size: 40px;
+        color: colors.$titleColor;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    #newEvent {
+        margin-bottom: 10px;
+    }
+}
+
+.navbar { // NAVBAR
+    background-color: colors.$darkerDark;
+    .nav-item {
+        font-size: 20px;
+        font-family: $fontHeading;
+    }
+    #logo {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+    }
+    .active a {
+        color: colors.$titleColor;
+    }
+    .navbar-toggler-icon { // change color on hamburger menu
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(49,198,232, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    .navbar-toggler-icon:hover {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(49,232,159,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}
+
+#calendar {
+    text-align: center;
+    .month {
+        border: 2px solid colors.$borderColor;
+        padding: 70px 25px;
+        width: 100%;
+        background: colors.$darkerDark;
+        text-align: center;
+        #calendarYear {
+            color: colors.$subTitleColor;
+            font-size: 20px;
+        }
+        #calendarMonth {
+            color: colors.$titleColor;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            list-style-type: none;
+            color: colors.$subTitleColor;
+        }
+        #prevMonth {
+            float: left;
+            padding-top: 10px;
+        }
+        #nextMonth {
+            float: right;
+            padding-top: 10px;
+        }
+        #prevMonth:hover, #nextMonth:hover {
+            cursor: pointer;
+            color: colors.$titleColor;
+        }
+    }
+    table {
+        border-bottom: 2px solid colors.$borderColor;
+    }
+    .weekdays {
+        border-right: 2px solid colors.$borderColor;
+        border-left: 2px solid colors.$borderColor;
+        background-color: colors.$lightDark;
+    }
+    .weekdays th {
+        color: colors.$subTitleColor;
+    }
+    .days {
+        border: 2px solid colors.$borderColor;
+        background: colors.$darkerDark;
+    }
+    .days td.active {
+        color: colors.$titleColor;
+    }
+    .calendarEvent {
+        max-width: 100%;
+        display: block;
+        color: colors.$textColor;
+        background-color: colors.$lightDark;
+        border-radius: 4px;
+        border: 2px solid colors.$borderColor;
+    }
+    .calendarTitle {
+        display: none;
+    }
+    .tr:empty {
+        display: none;
+    }
+}
+
+#events {
+
+    .eventCard { // upcoming events
+        font-size: $bodyText;
+        font-family: $fontBody;
+        border: 2px solid colors.$borderColor;
+        border-radius: 2px;
+        margin-bottom: 15px;
+        padding: 5px;
+        background-color: colors.$darkerDark;
+        overflow: auto;
+        clear: both;
+        img {
+            width: $iconSize;
+            height: $iconSize;
+        }
+        .phone {
+            margin-right: 5px;
+        }
+        span, .edit {
+            float: right;
+        }
+        .delete {
+            background: none;
+            border: none;
+            float: right;
+            margin-left: 5px;
+        }
+        .email {
+            width: 25px;
+            height: 25px;
+        }
+        h3 {
+            float: left;
+            color: colors.$subTitleColor;
+        }
+        span {
+            margin-top: 8px;
+        }
+        p {
+            clear: both;
+        }
+        img:hover {
+            cursor: pointer;
+        }
+    }
+    .btn {
+        margin-bottom: 10px;
+    }
+}
+
+.close { // close button
+    color: colors.$subTitleColor;
+    opacity: 1;
+    text-shadow: none;
+}
+.close:hover {
+    color: colors.$titleColor;
+}
+
+#ui-datepicker-div { // datepicker
+    background-color: colors.$lightDark;
+    padding: 5px;
+    border: 2px solid colors.$borderColor;
+    .ui-state-default {
+        text-align: center;
+        color: colors.$textColor;
+        background-color: colors.$darkerDark;
+        border-color: colors.$darkerDark;
+    }
+    .ui-state-active {
+        color: black;
+        background-color: colors.$subTitleColor;
+        border-color: colors.$subTitleColor;
+    }
+    .ui-state-highlight {
+        color: black;
+        background-color: colors.$titleColor;
+        border-color: colors.$titleColor;
+    }
+    .ui-datepicker-header {
+        color: colors.$textColor;
+        background-color: colors.$darkerDark;
+        border-color: colors.$darkerDark;
+    }
+}
+
+#addNewEvent {
+    .form-control {
+        border: 2px solid colors.$borderColor;
+        color: black;
+        margin-bottom: 10px;
+    }
+    textarea {
+        height: auto;
+    }
+}
+
+// buttons
+
+.btn { 
+    background-color: colors.$subTitleColor;
+    border: 2px solid colors.$borderColor;
+    color: black;
+}
+.btn:hover {
+    background-color: colors.$titleColor;
+}
+
+.btn:focus, button:focus, a:focus, input[type=text] {
+    outline: none;
+    box-shadow: none;
+}
+
+// Styles in customer
+
+td{
+    color: colors.$textColor;
+}
+
+th {
+    color: colors.$titleColor;
+}
+
+.selectCustomer {
+    background-color: rgba(49, 232, 159, 0.28);
+}
+
+#customerTbody tr:hover {
+    background-color: rgba(49, 232, 159, 0.28);
+}
+
+.modal-body input {
+    margin-bottom: 1rem;
+}
+
+// Log-in page
+
+#loginLogo {
+    height: 10%;
+    width: 10%;
+    margin: 1rem 1rem;
+    
+  }
+
+.logininput{
+
+margin-bottom: 1rem;
+
+}
+
+.login_wrap{
+margin-top: 15%;
+}
+
+// History
+
+.container_history{
+
+margin-top: 3px;
+margin-right: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .calendarEvent {
+        margin: auto;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .table td, table th {
+        padding: 0.5rem !important;
+    }
+    .calendarEvent {
+        font-size: 75%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .table td, table th {
+        padding: 0.25rem !important;
+    }
+}
